@@ -114,9 +114,11 @@ if __name__ == "__main__":
         config = json.loads(f.read())
     scene = config["scene"]
 
-    with open(PROJECT_DIR / f"{scene}.json") as f:
-        scene_config = json.loads(f.read())
-    config.update(scene_config)
+    scene_config_path = PROJECT_DIR / f"{scene}.json"
+    if scene_config_path.exists():
+        with open() as f:
+            scene_config = json.loads(f.read())
+        config.update(scene_config)
 
     scene_folder = Path(config["scenes_folder"]) / config["scene"]
     video_file = Path(config["result_folder"]) / f"{config['scene']}.mp4"
@@ -127,5 +129,5 @@ if __name__ == "__main__":
         video_file,
         config["input_fps"],
         config["output_fps"],
-        config["frames"],
+        config.get("frames", {}),
     )
