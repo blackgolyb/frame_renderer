@@ -1,4 +1,4 @@
 /result
 /scenes
-!config.json
 *.json
+!config.json

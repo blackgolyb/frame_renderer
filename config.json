@@ -1,0 +1,7 @@
+{
+  "scenes_folder": "scenes",
+  "result_folder": "result",
+  "scene": "scene_1",
+  "input_fps": 4,
+  "output_fps": 4
+}
