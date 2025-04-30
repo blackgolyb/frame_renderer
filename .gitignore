@@ -1,4 +1,3 @@
 /result
-/scenes
 *.json
 !config.json
