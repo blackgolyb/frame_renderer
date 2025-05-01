@@ -116,7 +116,7 @@ if __name__ == "__main__":
 
     scene_config_path = PROJECT_DIR / f"{scene}.json"
     if scene_config_path.exists():
-        with open() as f:
+        with open(scene_config_path) as f:
             scene_config = json.loads(f.read())
         config.update(scene_config)
 
